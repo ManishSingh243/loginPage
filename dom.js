@@ -1,4 +1,4 @@
-var items = document.getElementsByClassName('list-group-item');
+//var items = document.getElementsByClassName('list-group-item');
 /*items[0].textContent = 'Hello Maya';
 items[1].textContent = 'Hello Mani';
 items[2].textContent = 'Hello Money';
@@ -9,7 +9,7 @@ items[3].textContent = 'Hello Mishra';*/
 //var fontChange = document.getElementById('items');
 //fontChange.style.fontWeight = 'bold';
 
-var headerTitle = document.getElementById('header-title');
+/*var headerTitle = document.getElementById('header-title');
 headerTitle.style.borderBottom = 'solid 3px black';
 
 var title  = document.getElementById('add');
@@ -25,4 +25,12 @@ for(var i=0;i<items.length;i++){
 var tag = document.getElementsByTagName('li');
 for(var i=0;i<tag.length;i++){
     tag[i].style.backgroundColor = 'red';
+}*/
+
+var selector = document.querySelectorAll('li');
+selector[1].style.color = 'green';
+
+var odd = document.querySelectorAll('li:nth-child(odd)');
+for(var i=0;i<odd.length;i++){
+    odd[i].style.backgroundColor = 'green';
 }
