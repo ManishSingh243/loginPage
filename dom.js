@@ -1,10 +1,12 @@
-//var items = document.getElementsByClassName('list-group-item');
+var items = document.getElementsByClassName('list-group-item');
 /*items[0].textContent = 'Hello Maya';
 items[1].textContent = 'Hello Mani';
 items[2].textContent = 'Hello Money';
 items[3].textContent = 'Hello Mishra';*/
 
-//items[2].style.backgroundColor = 'green';
+items[1].style.backgroundColor = 'green';
+
+items[2].style.display = 'none';
 
 //var fontChange = document.getElementById('items');
 //fontChange.style.fontWeight = 'bold';
