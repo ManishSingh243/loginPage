@@ -108,14 +108,22 @@ var inputList = document.getElementById('items');
 var form  = document.getElementById('addForm');
 //var input = document.querySelector('#form-input');
 
+var filter = document.getElementById('filter');
+
 form.addEventListener('submit', addItem);
 
 inputList.addEventListener('click',deleteItem);
+
+filter.addEventListener('keyup', filterItems);
 
 function addItem(e){
    e.preventDefault();
 
    var inputName = document.getElementById('form-input').value;
+
+   var inputName2 = document.getElementById('form-input2').value;
+
+   inputName = inputName + " " + inputName2;
 
    var li = document.createElement('li');
    li.className = 'list-group-item';
@@ -139,4 +147,21 @@ function deleteItem(e){
             inputList.removeChild(li);
          }
     }
+}
+
+function filterItems(e){
+    var text = e.target.value.toLowerCase();
+
+    var items = inputList.getElementsByTagName('li');
+
+    Array.from(items).forEach(function(item){
+        var itemName = item.firstChild.textContent;
+
+        if(itemName.toLowerCase().indexOf(text) != -1){
+            item.style.display = 'block';
+        }
+        else{
+            item.style.display = 'none';
+        }
+    });
 }
